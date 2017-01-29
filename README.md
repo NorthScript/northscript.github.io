@@ -1,8 +1,7 @@
 #Glixer - GitHub Pages, Gulp, Jekyll, SCSS, Bootstrap. 
+Blog, Portfolio & Website build system.
 
-## Blog, Portfolio & Website build system.
-
-### Why?
+## Why?
 1. EASY to use and Quick to get started.
 2. Nothing else does this.
 
@@ -10,10 +9,10 @@ People new to web developement and working professionals often do not have the k
 
 This project is meant to be a jump start for people in both groups. 
 
-### Demo
-View this jekyll theme in action [here](https://boardley.github.io/)
+## Demo
+View this jekyll theme in action [here](https://m-c-c.github.io/)
 
-### Built with:
+## Built with:
 - [Bootstrap](http://getbootstrap.com/)
 - [Bourbon](http://bourbon.io/)
 - [Browser Sync](https://browsersync.io/)
@@ -27,7 +26,10 @@ View this jekyll theme in action [here](https://boardley.github.io/)
 
 The tools listed above are included with this package and are ready to go once this package is installed.
 
-### Getting Started Windows User:
+## Getting Started
+You have options here.  You can either locally develop in which case follow the instructions below for your OS, or you can develop online at [c9.io](https://c9.io).
+
+### Windows User:
 
 #### Download and Install the following items:
 1. [Ruby Installer](https://rubyinstaller.org/downloads/)
@@ -53,11 +55,22 @@ You might be prompted for your password. Please enter it now.
 This will install all of the items necessary for your build system to run. 
 Once everything is done installing, move on to the next step.
 
-4. 
+### C9
+1. Logon to Github
+2. Fork this [repository](https://github.com/M-C-C/M-C-C.github.io)
+3. Copy your fork url e.g. `git@github.com:YOURUSERNAME/M-C-C.github.io.git`
+4. On [c9.io)[https://c9.io] create a new workspace
+   * Template: Blank (Ubuntu Logo)
+   * Clone from Git: use your fork url here
+5. In your bash terminal type the following commands
+```
+sudo apt-get update
+make
+sudo npm rebuild node-sass
+gulp serve
+```
 
-
-
-### Built by
+## Built by
 [Mike Boardley](https://www.linkedin.com/in/boardley/)
 
 Please email me your comments & feedback.
