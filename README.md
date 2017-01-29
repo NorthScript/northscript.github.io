@@ -64,9 +64,9 @@ Once everything is done installing, move on to the next step.
    * Clone from Git: use your fork url here
 5. In your bash terminal type the following commands
 ```
-sudo apt-get update
+sudo apt-get update #shouldnt be needed soon as it will be in makefile
 make
-sudo npm rebuild node-sass
+sudo npm rebuild node-sass  #shouldnt be needed soon as it will be in makefile
 gulp serve
 ```
 
