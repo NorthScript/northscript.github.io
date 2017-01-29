@@ -141,8 +141,9 @@ gulp.task('serve', ['build:scripts','build:styles', 'build:images', 'build:copy'
   browserSync.init({
     server: siteDir,
     ghostMode: false, // do not mirror clicks, reloads, etc. (performance optimization)
-    logFileChanges: true
-    //open: false       // do not open the browser (annoying)
+    logFileChanges: true,
+    port: 8080,
+    open: false       // do not open the browser (annoying)
   });
 
   // Watch site settings
