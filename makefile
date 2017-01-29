@@ -6,5 +6,6 @@ all:
 	bundler update
 	bundler install
 	sudo npm install
+	npm rebuild node-sass
 test:
 	gulp serve
