@@ -62,11 +62,12 @@ Once everything is done installing, move on to the next step.
 4. On [c9.io)[https://c9.io] create a new workspace
    * Template: Blank (Ubuntu Logo)
    * Clone from Git: use your fork url here
-5. In your bash terminal type the following commands
+5. See Linux Install Instructions
+
+### Linux install instructions (For distributions with apt-get)
+1. Open a BASH terminal and navigate to the project folder. Then enter the Following commands (1 command per line):
 ```
-sudo apt-get update #shouldnt be needed soon as it will be in makefile
 make
-sudo npm rebuild node-sass  #shouldnt be needed soon as it will be in makefile
 gulp serve
 ```
 
