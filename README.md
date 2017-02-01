@@ -71,21 +71,8 @@ gulp serve
 ```
 ### Windows Install
 
-1. Open an Elevated Powershell prompt (You can do this by searching for a progam called PowerShel, Right-Clicking it amd, click Run As Administrator, This won't work without it)
-2. Enter the following commands (1 command per line):
-```
-  SetExecutionPolicy Unrestricted   // You might want to run SetExecutionPolicy AllSigned when finished
-  Install-PackageProvider chocolatey
-  Install-Package ruby ruby.devkit nodejs git
-  gem install jekyll bundler
-  npm install -g gulp
-  git clone https://github.com/m-c-c/m-c-c.github.io/ // or your forked repo
-  cd m-c-c.github.io // Or your forked repo
-  bundler update
-  bundler install
-  npm install
-  npm rebuild node-sass
-```
+Coming Very Soon!
+
 ## Operation
 1. Navigate to the project folder using the Terminal, Command Prompt or, PowerShell and run `gulp serve`
 2. Open a web browser if it didn't automatically and go to the following url `http://localhost:8080`
