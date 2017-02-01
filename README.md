@@ -70,7 +70,8 @@ make
 gulp serve
 ```
 ### Windows Install
-1. Open an Elevated Powershell prompt (You can do this by opening a elevated Command Prompt and typing in `powershell`)
+
+1. Open an Elevated Powershell prompt (You can do this by searching for a progam called PowerShel, Right-Clicking it amd, click Run As Administrator, This won't work without it)
 2. Enter the following commands (1 command per line):
 ```
   SetExecutionPolicy Unrestricted   // You might want to run SetExecutionPolicy AllSigned when finished
