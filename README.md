@@ -73,7 +73,7 @@ gulp serve
 1. Open an Elevated Powershell prompt (You can do this by opening a elevated Command Prompt and typing in `powershell`)
 2. Enter the following commands (1 command per line):
 ```
-  SetExecutionPolicy Unrestricted   // You might want to run SetExecutionPolicy 
+  SetExecutionPolicy Unrestricted   // You might want to run SetExecutionPolicy AllSigned when finished
   Install-PackageProvider chocolatey
   Install-Package ruby ruby.devkit nodejs git
   gem install jekyll bundler
