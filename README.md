@@ -29,8 +29,6 @@ The tools listed above are included with this package and are ready to go once t
 ## Getting Started
 You have options here.  You can either locally develop in which case follow the instructions below for your OS, or you can develop online at [c9.io](https://c9.io).
 
-### Windows User:
-
 #### Download and Install the following items:
 1. [Ruby Installer](https://rubyinstaller.org/downloads/)
 1. Ruby Dev Kit
@@ -87,11 +85,11 @@ gulp serve
   npm install
   npm rebuild node-sass
 ```
-3. To run Glixer, navigate to the project folder (via Powershell or CMD) and enter the following command:
-```
-  gulp serve
-```
-4. `Ctrl-C` to quit serving the site
+## Operation
+1. Navigate to the project folder using the Terminal, Command Prompt or, PowerShell and run `gulp serve`
+2. Open a web browser if it didn't automatically and go to the following url `http://localhost:8080`
+3. Make some changes to the files inside the `_layouts` folder and see it automatically show up! 
+4. When you are finished, go back to the command line and terminate the task by `Ctrl-C`
 
 ## Built by
 [Mike Boardley](https://www.linkedin.com/in/boardley/)
