@@ -57,7 +57,7 @@ Once everything is done installing, move on to the next step.
 1. Logon to Github
 2. Fork this [repository](https://github.com/M-C-C/M-C-C.github.io)
 3. Copy your fork url e.g. `git@github.com:YOURUSERNAME/M-C-C.github.io.git`
-4. On [c9.io)[https://c9.io] create a new workspace
+4. On [c9.io](https://c9.io) create a new workspace
    * Template: Blank (Ubuntu Logo)
    * Clone from Git: use your fork url here
 5. See Linux Install Instructions
