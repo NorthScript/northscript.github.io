@@ -65,11 +65,33 @@ Once everything is done installing, move on to the next step.
 5. See Linux Install Instructions
 
 ### Linux install instructions (For distributions with apt-get)
-1. Open a BASH terminal and navigate to the project folder. Then enter the Following commands (1 command per line):
+1. Open a BASH terminal and navigate to the project folder. 
+2. Enter the Following commands (1 command per line):
 ```
 make
 gulp serve
 ```
+### Windows Install
+1. Open an Elevated Powershell prompt (You can do this by opening a elevated Command Prompt and typing in `powershell`)
+2. Enter the following commands (1 command per line):
+```
+  SetExecutionPolicy Unrestricted   // You might want to run SetExecutionPolicy 
+  Install-PackageProvider chocolatey
+  Install-Package ruby ruby.devkit nodejs git
+  gem install jekyll bundler
+  npm install -g gulp
+  git clone https://github.com/m-c-c/m-c-c.github.io/ // or your forked repo
+  cd m-c-c.github.io // Or your forked repo
+  bundler update
+  bundler install
+  npm install
+  npm rebuild node-sass
+```
+3. To run Glixer, navigate to the project folder (via Powershell or CMD) and enter the following command:
+```
+  gulp serve
+```
+4. `Ctrl-C` to quit serving the site
 
 ## Built by
 [Mike Boardley](https://www.linkedin.com/in/boardley/)
