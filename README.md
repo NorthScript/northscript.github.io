@@ -76,8 +76,15 @@ Coming Very Soon!
 ## Operation
 1. Navigate to the project folder using the Terminal, Command Prompt or, PowerShell and run `gulp serve`
 2. Open a web browser if it didn't automatically and go to the following url `http://localhost:8080`
-3. Make some changes to the files inside the `_layouts` folder and see it automatically show up! 
+3. Make some changes to the files inside any folder or file starting with an underscore (except for the automatically generated `_sites` folder) and see your changes automatically show up in your browser! 
 4. When you are finished, go back to the command line and terminate the task by `Ctrl-C`
+
+## Folder Structure
+ - `_layouts`: Page layouts/templates
+ - `_includes`: HTML Snippets (Your navbar, footer, etc.)
+ - `_app`: All of the Fonts, SCSS, JS, Locally hosting configuration (`localhost_config.yml`)
+ - `_posts`: ???
+ - `index.html` Page that is being served.
 
 ## Built by
 [Mike Boardley](https://www.linkedin.com/in/boardley/)
