@@ -38,3 +38,6 @@ exclude: ["_app",
           "gulpfile.js",
           "node_modules",
           "package.json"]
+  
+collections:
+ - pages
