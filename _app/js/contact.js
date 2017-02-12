@@ -6,7 +6,7 @@ $('#contactus').on('click', function (e) {
         fields[fieldsArr[x]] = $('#' + fieldsArr[x]).val();
     }
     var postBody = {
-        endpoint : "jacebenson-bot/test",
+        endpoint : "M-C-C/meetups",
         title    : fields.message.substr(0,20),
         body     : 'Name: ' + fields.name + '\nEmail: ' + fields.email +'\n\n' + fields.message
     }
