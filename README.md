@@ -1,4 +1,4 @@
-#Glixer - GitHub Pages, Gulp, Jekyll, SCSS, Bootstrap. 
+# Glixer - GitHub Pages, Gulp, Jekyll, SCSS, Bootstrap. 
 Blog, Portfolio & Website build system.
 
 ## Why?
