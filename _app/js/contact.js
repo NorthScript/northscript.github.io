@@ -6,11 +6,11 @@ $('#contactus').on('click', function (e) {
         fields[fieldsArr[x]] = $('#' + fieldsArr[x]).val();
     }
     var postBody = {
-        endpoint : "M-C-C/M-C-C.github.io",
+        endpoint : "M-C-C/meetups",
         title    : fields.message.substr(0,20),
         body     : 'Name: ' + fields.name + '\nEmail: ' + fields.email +'\n\n' + fields.message
-        //body     : fields.name + '(' + fields.email +')\n\n' + fields.message
     }
+    console.log(postBody);
     if(fields.message && fields.email && fields.name){
         contactUs(postBody);
     } else {
@@ -40,7 +40,9 @@ function contactUs(obj){
         //alert("Success: " + r.responseText);
         
         $('#info').removeClass('hide');
-        var responseObj = JSON.parse(r.responseText);
+        console.log('r.responseText: ' + r.responseText);
+        console.log('r.response: ' + r.response);
+        var responseObj = r.responseText;
         //var obj = r.responseText;
         $('#info').html('<a target="_blank" href="'+responseObj.url+'">Thanks for submitting this feedback</a>');
       }
