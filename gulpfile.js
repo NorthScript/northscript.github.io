@@ -20,7 +20,7 @@ var gulp = require('gulp'),
 	streamqueue  = require('streamqueue'),
 	jekyllDir = '_src/',
 	siteDir = '.site',
-	appDir = '_src/app';
+	appDir = '_src/_app';
 
 var plumberErrorHandler = {
 			errorHandler: notify.onError({
