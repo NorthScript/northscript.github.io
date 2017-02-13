@@ -18,9 +18,9 @@ var gulp = require('gulp'),
 	rename = require('gulp-rename'),
 	run = require('gulp-run'),
 	streamqueue  = require('streamqueue'),
-	jekyllDir = './',
-	siteDir = '_site',
-	appDir = '_app';
+	jekyllDir = '_src/',
+	siteDir = '.site',
+	appDir = '_src/app';
 
 var plumberErrorHandler = {
 			errorHandler: notify.onError({
@@ -38,12 +38,12 @@ gulp.task('build:copy', function() {
 
 	// Copy Fonts
 	gulp.src(['node_modules/font-awesome/fonts/**/*.{ttf,woff,woff2,eof,svg}'])
-		.pipe(gulp.dest(siteDir+'/fonts/font-awesome'))
-		.pipe(gulp.dest('fonts/font-awesome'));
+		.pipe(gulp.dest(siteDir + '/fonts/font-awesome'))
+		.pipe(gulp.dest('./_lib/fonts/font-awesome'));
 
 	gulp.src('node_modules/bootstrap-sass/assets/fonts/**/*.{ttf,woff,woff2,eof,svg}')
-		.pipe(gulp.dest(siteDir+'/fonts'))
-		.pipe(gulp.dest('fonts'));
+		.pipe(gulp.dest(siteDir + '/fonts'))
+		.pipe(gulp.dest('./_lib/fonts'));
 
 	// Copy Javascript
 	gulp.src(['node_modules/bootstrap-sass/assets/javascripts/bootstrap.js'])
@@ -65,7 +65,7 @@ gulp.task('build:images', function(cb) {
 
 // Runs Jekyll build
 gulp.task('build:jekyll', function() {
-  var shellCommand = 'bundle exec jekyll build --config _config.yml,_app/localhost_config.yml';
+  var shellCommand = 'bundle exec jekyll build --config _config.yml,' + appDir + '/localhost_config.yml';
   if (config.drafts) { shellCommand += ' --drafts'; };
 
   return gulp.src(jekyllDir)
@@ -93,7 +93,7 @@ gulp.task('build:scripts', function() {
     .pipe(concat('site.js'))
     .pipe(uglify())
     .pipe(gulp.dest(siteDir+'/js'))
-    .pipe(gulp.dest('js'))
+    .pipe(gulp.dest('./lib/js'))
     .on('error', gutil.log);
 });
 
@@ -108,7 +108,7 @@ gulp.task('build:styles', function() {
 		.pipe(cleanCSS())
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(siteDir+"/css"))
-		.pipe(gulp.dest("css"))
+		.pipe(gulp.dest("./lib/css"))
 		.pipe(browserSync.stream());
 });
 
@@ -147,36 +147,31 @@ gulp.task('serve', ['build:scripts','build:styles', 'build:images', 'build:copy'
   });
 
   // Watch site settings
-  gulp.watch(['_config.yml', '_app/localhost_config.yml'], ['build:jekyll:watch']);
+  gulp.watch(['_config.yml', appDir + '/localhost_config.yml'], ['build:jekyll:watch']);
 
   // Watch app .scss files, changes are piped to browserSync
-  gulp.watch('_app/scss/**/*.scss', ['build:styles']);
+  gulp.watch(appDir + '/scss/**/*.scss', ['build:styles']);
 
   // Watch app .js files
-  gulp.watch('_app/js/**/*.js', ['build:scripts:watch']);
+  gulp.watch(appDir + '/js/**/*.js', ['build:scripts:watch']);
 
   // Watch Jekyll posts
-  gulp.watch(['_posts/**/*.+(md|markdown|MD)', '_posts/**/*.html'], ['build:jekyll:watch']);
+  gulp.watch(['src/posts/**/*.+(md|markdown|MD)', 'src/posts/**/*.html'], ['build:jekyll:watch']);
 
   // Watch Jekyll drafts if --drafts flag was passed
   if (config.drafts) {
-    gulp.watch('_drafts/*.+(md|markdown|MD)', ['build:jekyll:watch']);
+    gulp.watch('src/drafts/*.+(md|markdown|MD)', ['build:jekyll:watch']);
   }
 
   // Watch Jekyll html files
-  gulp.watch(['**/*.html', '!_site/**/*.*'], ['build:jekyll:watch']);
+  gulp.watch(['**/*.html', '!.site/**/*.*'], ['build:jekyll:watch']);
 
   // Watch Jekyll RSS feed XML file
   gulp.watch('feed.xml', ['build:jekyll:watch']);
 
   // Watch Jekyll data files
-  gulp.watch('_data/**.*+(yml|yaml|csv|json)', ['build:jekyll:watch']);
+  gulp.watch('src/data/**.*+(yml|yaml|csv|json)', ['build:jekyll:watch']);
 
   // Watch Jekyll favicon.ico
-  gulp.watch('favicon.ico', ['build:jekyll:watch']);
+  gulp.watch('src/icons/favicon.ico', ['build:jekyll:watch']);
 });
-
-
-
-
-
