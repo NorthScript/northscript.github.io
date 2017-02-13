@@ -93,7 +93,7 @@ gulp.task('build:scripts', function() {
     .pipe(concat('site.js'))
     .pipe(uglify())
     .pipe(gulp.dest(siteDir+'/js'))
-    .pipe(gulp.dest('./lib/js'))
+    .pipe(gulp.dest('./_lib/js'))
     .on('error', gutil.log);
 });
 
@@ -108,7 +108,7 @@ gulp.task('build:styles', function() {
 		.pipe(cleanCSS())
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(siteDir+"/css"))
-		.pipe(gulp.dest("./lib/css"))
+		.pipe(gulp.dest("./_lib/css"))
 		.pipe(browserSync.stream());
 });
 
