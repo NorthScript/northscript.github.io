@@ -21,7 +21,7 @@ var gulp = require('gulp'),
 	jekyllDir = '_src/',
 	siteDir = '.site',
 	appDir = '_src/_app',
-     lib = '.lib';
+     lib = './';
 
 var plumberErrorHandler = {
 			errorHandler: notify.onError({

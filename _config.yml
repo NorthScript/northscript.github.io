@@ -45,8 +45,6 @@ exclude: ["_src/app",
           "gulpfile.js",
           "node_modules",
           "package.json"]
-keep_files: ["fonts",
-             "css"]
 defaults:
  -
    values:
