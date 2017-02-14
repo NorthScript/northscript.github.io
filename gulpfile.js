@@ -114,7 +114,7 @@ gulp.task('build:styles', function() {
 		.pipe(sass({
 				includePaths: [].concat(bourbon.includePaths, neat.includePaths)
 		}))
-		//.pipe(cleanCSS())
+		//.pipe(cleanCSS()) // Issue with Clean CSS breaking code
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(siteDir + "/css"))
 		.pipe(gulp.dest(lib + "/css"))
