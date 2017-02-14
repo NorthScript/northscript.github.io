@@ -1,4 +1,4 @@
-# Glixer - GitHub Pages, Gulp, Jekyll, SCSS, Bootstrap. 
+# Glixer - GitHub Pages, Gulp, Jekyll, SCSS, Bootstrap.
 Blog, Portfolio & Website build system.
 
 ## Why?
@@ -7,7 +7,7 @@ Blog, Portfolio & Website build system.
 
 People new to web developement and working professionals often do not have the knowledge or time to know which tools they should be using or the know-how to configure them.
 
-This project is meant to be a jump start for people in both groups. 
+This project is meant to be a jump start for people in both groups.
 
 ## Demo
 View this jekyll theme in action [here](https://m-c-c.github.io/)
@@ -29,30 +29,6 @@ The tools listed above are included with this package and are ready to go once t
 ## Getting Started
 You have options here.  You can either locally develop in which case follow the instructions below for your OS, or you can develop online at [c9.io](https://c9.io).
 
-#### Download and Install the following items:
-1. [Ruby Installer](https://rubyinstaller.org/downloads/)
-1. Ruby Dev Kit
-Make sure to check the 3 boxes BEFORE clicking the INSTALL button.
-2. [Node.js](https://nodejs.org/)
-3. [Jekyll](https://jekyllrb.com/)
-4. Bundler
-
-#### Command Line
-- PRESS & HOLD the Windows Key on your keyboard and PRESS R on your keyboard.
-This will launch the run window. Type cmd in the box and PRESS ENTER.
-
-Now that you have terminal / command line open, follow the steps below:
-
-1. Clone respository: copy this line `git clone https://github.com/Boardley/boardley.github.io.git`
-In your terminal / command line widnow right click and select PASTE.
-Once you see the code in the window, PRESS ENTER.
-2. Change Directory: After the project is done downloading, type 
-
-3. Type `sudo npm install` PRESS ENTER. 
-You might be prompted for your password. Please enter it now.
-This will install all of the items necessary for your build system to run. 
-Once everything is done installing, move on to the next step.
-
 ### C9
 1. Logon to Github
 2. Fork this [repository](https://github.com/M-C-C/M-C-C.github.io)
@@ -63,28 +39,51 @@ Once everything is done installing, move on to the next step.
 5. See Linux Install Instructions
 
 ### Linux install instructions (For distributions with apt-get)
-1. Open a BASH terminal and navigate to the project folder. 
+1. Open a BASH terminal and navigate to the project folder.
 2. Enter the Following commands (1 command per line):
 ```
 make
 gulp serve
 ```
-### Windows Install
+### Windows
 
-Coming Very Soon!
+#### Download and Install the following items:
+1. [Ruby Installer](https://rubyinstaller.org/downloads/)
+2. [Git](https://www.git-scm.com/)
+3. [Node.js](https://nodejs.org/)
 
-## Operation
-1. Navigate to the project folder using the Terminal, Command Prompt or, PowerShell and run `gulp serve`
-2. Open a web browser if it didn't automatically and go to the following url `http://localhost:8080`
-3. Make some changes to the files inside any folder or file starting with an underscore (except for the automatically generated `_sites` folder) and see your changes automatically show up in your browser! 
-4. When you are finished, go back to the command line and terminate the task by `Ctrl-C`
+#### Instructions
+- Press `Win+r` to open a command prompt
 
-## Folder Structure
- - `_layouts`: Page layouts/templates
- - `_includes`: HTML Snippets (Your navbar, footer, etc.)
- - `_app`: All of the Fonts, SCSS, JS, Locally hosting configuration (`localhost_config.yml`)
- - `_posts`: ???
- - `index.html` Page that is being served.
+Now that you have command prompt open, enter the following commands:
+```
+Coming soon!
+```
+
+
+
+## Operation (On local machines)
+1. Navigate to the project folder using the Terminal, Command Prompt or, PowerShell and run `gulp serve`. It may seem that the program is hanging but it's not, it's running a web server right on the window! (That means that there's something wrong if it quits by itself)
+2. [Click Me!](http://localhost:8080)
+3. Modify files in the [_src](_src) folder and see that your browser reloads automatically!
+4. When you are finished editing and admiring your work, you can terminate the web server by pressing `Ctrl-C` in the command window
+
+## Operation (On C9.io)
+
+Coming Soon!
+
+## Project Structure
+ - [_src](_src): Where all your magic is
+     - [_app](_site/_app): Fonts, JS, SCSS, etc.
+          - [fonts](_site/_app/fonts): Where you want to store your fonts that you made/downloaded
+          - [js](_site/_app/js): JavaScript Files, [Vendor](_site/_app/js/vendor) is for your JavaScript libraries such as Jquery, Bootstrap, Angular, React, etc.
+          - [scss](_site/_app/scss): Folder where all of the styling happens, You can divide the files up however you would like.
+     - [_includes](_site/_includes): html snippets for the navbar, footer, etc.
+     - [_layouts](_site/_layouts): html site layouts, see [front.html](_site/_layouts/front.html) for an example
+     - [_posts](_site/_posts): Blog posts, used for blogs.
+ - [.site](.site): Automatically generated output, not recommended to modify anything here as it will get deleted/overwritten.
+ - [_config.yml](_config.yml): Jekyll Build Configuration, Don't change this unless you are feeling adventurous or know what you are doing
+ - [css](css), [fonts](fonts), [js](js): Used for Jekyll build. Not recommended to change anything in these folders unless you know what you are doing
 
 ## Built by
 [Mike Boardley](https://www.linkedin.com/in/boardley/)
@@ -97,3 +96,5 @@ Please email me your comments & feedback.
 
 =========
 
+## Maintainers
+[Samuel Brekke](https://www.linkedin.com/in/sjbrekke/)
