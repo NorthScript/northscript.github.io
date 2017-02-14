@@ -20,7 +20,8 @@ var gulp = require('gulp'),
 	streamqueue  = require('streamqueue'),
 	jekyllDir = '_src/',
 	siteDir = '.site',
-	appDir = '_src/_app';
+	appDir = '_src/_app',
+     lib = '.lib';
 
 var plumberErrorHandler = {
 			errorHandler: notify.onError({
@@ -39,33 +40,41 @@ gulp.task('build:copy', function() {
 	// Copy Fonts
 	gulp.src(['node_modules/font-awesome/fonts/**/*.{ttf,woff,woff2,eof,svg}'])
 		.pipe(gulp.dest(siteDir + '/fonts/font-awesome'))
-		.pipe(gulp.dest('./_lib/fonts/font-awesome'));
+		.pipe(gulp.dest(lib + '/fonts/font-awesome'));
 
 	gulp.src('node_modules/bootstrap-sass/assets/fonts/**/*.{ttf,woff,woff2,eof,svg}')
 		.pipe(gulp.dest(siteDir + '/fonts'))
-		.pipe(gulp.dest('./_lib/fonts'));
+		.pipe(gulp.dest(lib + '/fonts'));
 
 	// Copy Javascript
 	gulp.src(['node_modules/bootstrap-sass/assets/javascripts/bootstrap.js'])
-		.pipe(gulp.dest(appDir+'/js/vendor'));
+		.pipe(gulp.dest(appDir + '/js/vendor'));
 
 	gulp.src(['node_modules/jquery/dist/jquery.js'])
-		.pipe(gulp.dest(appDir+'/js/vendor'));
+		.pipe(gulp.dest(appDir + '/js/vendor'));
 
 })
 
 gulp.task('build:images', function(cb) {
-    gulp.src([appDir+'/**/*.png',appDir+'/**/*.jpg',appDir+'src/**/*.gif',appDir+'src/**/*.jpeg']).pipe(imageop({
-        optimizationLevel: 5,
-        progressive: true,
-        interlaced: true
-    })).pipe(gulp.dest(''))
-    .pipe(gulp.dest(siteDir)).on('end', cb).on('error', cb);
+    gulp.src([appDir+'/**/*.png',
+              appDir+'/**/*.jpg',
+              appDir+'src/**/*.gif',
+              appDir+'src/**/*.jpeg'])
+         .pipe(imageop({
+             optimizationLevel: 5,
+             progressive: true,
+             interlaced: true
+         }))
+         .pipe(gulp.dest(''))
+         .pipe(gulp.dest(siteDir)).on('end', cb).on('error', cb);
 });
 
 // Runs Jekyll build
 gulp.task('build:jekyll', function() {
-  var shellCommand = 'bundle exec jekyll build --config _config.yml,' + appDir + '/localhost_config.yml';
+  var shellCommand = 'bundle exec jekyll build --config _config.yml,' +
+                     appDir +
+                     '/localhost_config.yml';
+
   if (config.drafts) { shellCommand += ' --drafts'; };
 
   return gulp.src(jekyllDir)
@@ -86,57 +95,62 @@ gulp.task('build:scripts:watch', ['build:scripts'], function(cb) {
 // Build Scripts
 gulp.task('build:scripts', function() {
   return streamqueue({ objectMode: true },
-        gulp.src(appDir+'/js/vendor/jquery.js'),
-        gulp.src(appDir+'/js/vendor/bootstrap.js'),
-        gulp.src(appDir+'/js/**/*.js')
+        gulp.src(appDir + '/js/vendor/jquery.js'),
+        gulp.src(appDir + '/js/vendor/bootstrap.js'),
+        gulp.src(appDir + '/js/**/*.js')
     )
     .pipe(concat('site.js'))
     .pipe(uglify())
-    .pipe(gulp.dest(siteDir+'/js'))
-    .pipe(gulp.dest('./_lib/js'))
+    .pipe(gulp.dest(siteDir + '/js'))
+    .pipe(gulp.dest(lib + '/js'))
     .on('error', gutil.log);
 });
 
 // Compile SCSS
 gulp.task('build:styles', function() {
-	return gulp.src(appDir+'/scss/*.scss')
+	return gulp.src(appDir + '/scss/*.scss')
 		.pipe(plumber(plumberErrorHandler))
 		.pipe(sourcemaps.init())
 		.pipe(sass({
-				includePaths: [].concat(bourbon.includePaths, neat.includePaths),
+				includePaths: [].concat(bourbon.includePaths, neat.includePaths)
 		}))
-		.pipe(cleanCSS())
+		//.pipe(cleanCSS())
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest(siteDir+"/css"))
-		.pipe(gulp.dest("./_lib/css"))
+		.pipe(gulp.dest(siteDir + "/css"))
+		.pipe(gulp.dest(lib + "/css"))
 		.pipe(browserSync.stream());
 });
 
 gulp.task('prettify', function() {
 
-	gulp.src([appDir+"/scss/**/*.scss"])
+	gulp.src([appDir + "/scss/**/*.scss"])
 		.pipe(prettify({
 			debug: true,
 			indent_level: 1,
 		}))
-		.pipe(gulp.dest(appDir+'/scss'));
+		.pipe(gulp.dest(appDir + '/scss'));
 
-	gulp.src([siteDir+'/*.html'])
+	gulp.src([siteDir + '/*.html'])
 			.pipe(prettify({
 					debug: true,
 					indent_level: 1,
 			}))
 			.pipe(gulp.dest('./'));
 
-	gulp.src([appDir+'/js/*.js'])
+	gulp.src([appDir + '/js/*.js'])
 		.pipe(prettify({
 				debug: true,
 				indent_level: 1,
 		}))
-		.pipe(gulp.dest(appDir+'/js'));
+		.pipe(gulp.dest(appDir + '/js'));
 });
 
-gulp.task('serve', ['build:scripts','build:styles', 'build:images', 'build:copy','build:jekyll'], function() {
+gulp.task('serve', ['build:scripts',
+                    'build:styles',
+                    'build:images',
+                    'build:copy',
+                    'build:jekyll'],
+          function() {
 
   browserSync.init({
     server: siteDir,
