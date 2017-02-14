@@ -74,13 +74,13 @@ Coming Soon!
 
 ## Project Structure
  - [_src](_src): Where all your magic is
-     - [_app](_site/_app): Fonts, JS, SCSS, etc.
-          - [fonts](_site/_app/fonts): Where you want to store your fonts that you made/downloaded
-          - [js](_site/_app/js): JavaScript Files, [Vendor](_site/_app/js/vendor) is for your JavaScript libraries such as Jquery, Bootstrap, Angular, React, etc.
-          - [scss](_site/_app/scss): Folder where all of the styling happens, You can divide the files up however you would like.
-     - [_includes](_site/_includes): html snippets for the navbar, footer, etc.
-     - [_layouts](_site/_layouts): html site layouts, see [front.html](_site/_layouts/front.html) for an example
-     - [_posts](_site/_posts): Blog posts, used for blogs.
+     - [_app](_src/_app): Fonts, JS, SCSS, etc.
+          - [fonts](_src/_app/fonts): Where you want to store your fonts that you made/downloaded
+          - [js](_src/_app/js): JavaScript Files, [Vendor](_site/_app/js/vendor) is for your JavaScript libraries such as Jquery, Bootstrap, Angular, React, etc.
+          - [scss](_src/_app/scss): Folder where all of the styling happens, You can divide the files up however you would like.
+     - [_includes](_src/_includes): html snippets for the navbar, footer, etc.
+     - [_layouts](_src/_layouts): html site layouts, see [front.html](_site/_layouts/front.html) for an example
+     - [_posts](_src/_posts): Blog posts, used for blogs.
  - [.site](.site): Automatically generated output, not recommended to modify anything here as it will get deleted/overwritten.
  - [_config.yml](_config.yml): Jekyll Build Configuration, Don't change this unless you are feeling adventurous or know what you are doing
  - [css](css), [fonts](fonts), [js](js): Used for Jekyll build. Not recommended to change anything in these folders unless you know what you are doing
