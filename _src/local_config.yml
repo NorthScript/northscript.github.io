@@ -27,12 +27,12 @@ github_username:  ""
 
 # Build settings
 markdown: kramdown
-layouts_dir: ./_src/_layouts
-source: ./
+layouts_dir: ./_layouts
+source: ./_src
 destination: ./.site
-plugins_dir: ./_src/_plugins
-data_dir: ./_src/_data
-includes_dir: ./_src/_includes
+plugins_dir: ./_plugins
+data_dir: ./_data
+includes_dir: ./_includes
 
 
 

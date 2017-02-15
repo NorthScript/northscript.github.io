@@ -39,12 +39,10 @@ gulp.task('build:copy', function() {
 
 	// Copy Fonts
 	gulp.src(['node_modules/font-awesome/fonts/**/*.{ttf,woff,woff2,eof,svg}'])
-		.pipe(gulp.dest(siteDir + '/fonts/font-awesome'))
-		.pipe(gulp.dest(lib + '/fonts/font-awesome'));
+		.pipe(gulp.dest(siteDir + '/fonts/font-awesome'));
 
 	gulp.src('node_modules/bootstrap-sass/assets/fonts/**/*.{ttf,woff,woff2,eof,svg}')
-		.pipe(gulp.dest(siteDir + '/fonts'))
-		.pipe(gulp.dest(lib + '/fonts'));
+		.pipe(gulp.dest(siteDir + '/fonts'));
 
 	// Copy Javascript
 	gulp.src(['node_modules/bootstrap-sass/assets/javascripts/bootstrap.js'])
@@ -71,7 +69,9 @@ gulp.task('build:images', function(cb) {
 
 // Runs Jekyll build
 gulp.task('build:jekyll', function() {
-  var shellCommand = 'bundle exec jekyll build --config _config.yml,' +
+  var shellCommand = 'bundle exec jekyll build --config ' +
+                     jekyllDir +
+                     'local_config.yml, ' +
                      appDir +
                      '/localhost_config.yml';
 
@@ -100,9 +100,8 @@ gulp.task('build:scripts', function() {
         gulp.src(appDir + '/js/**/*.js')
     )
     .pipe(concat('site.js'))
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(gulp.dest(siteDir + '/js'))
-    .pipe(gulp.dest(lib + '/js'))
     .on('error', gutil.log);
 });
 
@@ -117,7 +116,6 @@ gulp.task('build:styles', function() {
 		//.pipe(cleanCSS()) // Issue with Clean CSS breaking code
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(siteDir + "/css"))
-		.pipe(gulp.dest(lib + "/css"))
 		.pipe(browserSync.stream());
 });
 
@@ -145,11 +143,7 @@ gulp.task('prettify', function() {
 		.pipe(gulp.dest(appDir + '/js'));
 });
 
-gulp.task('serve', ['build:scripts',
-                    'build:styles',
-                    'build:images',
-                    'build:copy',
-                    'build:jekyll'],
+gulp.task('serve', ['build:scripts', 'build:styles', 'build:images', 'build:copy', 'build:jekyll'],
           function() {
 
   browserSync.init({
@@ -189,3 +183,16 @@ gulp.task('serve', ['build:scripts',
   // Watch Jekyll favicon.ico
   gulp.watch('src/icons/favicon.ico', ['build:jekyll:watch']);
 });
+
+gulp.task('publish', ['build:scripts', 'build:styles', 'build:images', 'build:copy'],
+     function() {
+          gulp.src(siteDir + '/js/*')
+               .pipe(gulp.dest(lib + '/js'));
+          gulp.src(siteDir + '/css/*')
+               .pipe(gulp.dest(lib + '/css'));
+          gulp.src(siteDir + '/fonts/**/*')
+               .pipe(gulp.dest(lib + '/fonts'));
+          gulp.src(jekyllDir + '/**.*+(md|html|markdown)')
+               .pipe(gulp.dest(lib));
+     }
+);
