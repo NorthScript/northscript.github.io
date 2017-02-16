@@ -12625,7 +12625,6 @@ $('#contactus').on('click', function (e) {
     }
 
 })
-
 function contactUs(obj){
     //disable form
     
@@ -12649,6 +12648,16 @@ function contactUs(obj){
     r.send(requestBody);
 }
 
+/*global L*/
+
+var map = L.map('map').setView([44.980642, -93.269924], 20);
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+L.marker([44.980642, -93.269924]).addTo(map)
+    .bindPopup('<a href="http://www.hclib.org/about/locations/minneapolis-central">Central Library</a>')
+    .openPopup();
 $(document).ready(function() {
 
 });

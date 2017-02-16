@@ -56,6 +56,8 @@ gulp.task('build:copy', function() {
 gulp.task('build:images', function(cb) {
     gulp.src([appDir+'/**/*.png',
               appDir+'/**/*.jpg',
+              appDir+'/**/*.gif',
+              appDir+'src/**/*.png',
               appDir+'src/**/*.gif',
               appDir+'src/**/*.jpeg'])
          .pipe(imageop({
