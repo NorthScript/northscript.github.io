@@ -46,19 +46,7 @@ make
 gulp serve
 ```
 ### Windows
-
-#### Download and Install the following items:
-1. [Ruby Installer](https://rubyinstaller.org/downloads/)
-2. [Git](https://www.git-scm.com/)
-3. [Node.js](https://nodejs.org/)
-
-#### Instructions
-- Press `Win+r` to open a command prompt
-
-Now that you have command prompt open, enter the following commands:
-```
-Coming soon!
-```
+See Windows-Install.md
 
 ### Mac OSX
 #### Prerequisites
