@@ -60,6 +60,20 @@ Now that you have command prompt open, enter the following commands:
 Coming soon!
 ```
 
+### Mac OSX
+#### Prerequisites
+1. Node.js
+2. XCode
+
+#### Install/building instructions
+1. open up a new terminal
+2. Enter the following commands: 
+```
+git clone https://github.com/m-c-c/m-c-c.github.io
+cd m-c-c.github.io
+npm install
+```
+
 
 
 ## Operation (On local machines)
