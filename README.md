@@ -57,12 +57,12 @@ See Windows-Install.md
 1. open up a new terminal
 2. Enter the following commands: 
 ```
-git clone https://github.com/m-c-c/m-c-c.github.io
-cd m-c-c.github.io
-npm install
+git clone https://github.com/north-script/north-script.github.io
+cd north-script.github.io
+make #ignore the errors
+sudo apt-get install zlib1g-dev ruby ruby-dev build-essential
+npm install #you'll get a big thumbs up if its all good
 ```
-
-
 
 ## Operation (On local machines)
 1. Navigate to the project folder using the Terminal, Command Prompt or, PowerShell and run `gulp serve`. It may seem that the program is hanging but it's not, it's running a web server right on the window! (That means that there's something wrong if it quits by itself)
@@ -72,7 +72,8 @@ npm install
 
 ## Operation (On C9.io)
 
-Coming Soon!
+1. In your terminal run `gulp serve`
+2. Click the "Preview" link on the top.
 
 ## Project Structure
  - [_src](_src): Where all your magic is
