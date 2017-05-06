@@ -13,7 +13,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-url: "https://m-c-c.github.io" # the base hostname & protocol for your site
+development: true
+url: "" # the base hostname & protocol for your site
 baseurl: ""
 title: Minneapolis Coding Collaborative
 email: ""
@@ -35,12 +36,10 @@ data_dir: ./_data
 includes_dir: ./_includes
 
 
-
 gems: [jekyll-paginate, jekyll-feed, jekyll-readme-index]
 permalink: pretty
 paginate: 5
-exclude: ["_src/_app",
-          "Gemfile",
+exclude: ["Gemfile",
           "Gemfile.lock",
           "gulpfile.js",
           "node_modules",

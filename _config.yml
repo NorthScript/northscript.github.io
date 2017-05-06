@@ -37,18 +37,13 @@ includes_dir: ./_src/_includes
 
 
 gems: [
-    "jekyll-paginate", 
+    "jekyll-paginate",
     "jekyll-feed"
 #    "jekyll-readme-index"
     ]
 permalink: pretty
 paginate: 5
-exclude: ["_src/_app",
-          "Gemfile",
-          "Gemfile.lock",
-          "gulpfile.js",
-          "node_modules",
-          "package.json"]
+exclude: ["_src"]
 keep_files: ["css",
              "fonts",
              "js"]

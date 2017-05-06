@@ -1,5 +1,7 @@
-# Glixer - GitHub Pages, Gulp, Jekyll, SCSS, Bootstrap.
-Blog, Portfolio & Website build system.
+<h1 align="center">Glixer - GitHub Pages, Gulp, Jekyll, SCSS, Bootstrap.</h1>
+<p align="center">Blog, Portfolio &amp Website framework.</p>
+
+[![Join the chat at https://gitter.im/Northscript/glixer](https://badges.gitter.im/Northscript/glixer.svg)](https://gitter.im/Northscript/glixer?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## Why?
 1. EASY to use and Quick to get started.
@@ -10,7 +12,7 @@ People new to web developement and working professionals often do not have the k
 This project is meant to be a jump start for people in both groups.
 
 ## Demo
-View this jekyll theme in action [here](https://m-c-c.github.io/)
+View this jekyll theme in action [here](https://north-script.github.io/glixer)
 
 ## Built with:
 - [Bootstrap](http://getbootstrap.com/)
@@ -27,66 +29,102 @@ View this jekyll theme in action [here](https://m-c-c.github.io/)
 The tools listed above are included with this package and are ready to go once this package is installed.
 
 ## Getting Started
-You have options here.  You can either locally develop in which case follow the instructions below for your OS, or you can develop online at [c9.io](https://c9.io).
 
 ### C9
+
+#### Setup
+
 1. Logon to Github
-2. Fork this [repository](https://github.com/M-C-C/M-C-C.github.io)
-3. Copy your fork url e.g. `git@github.com:YOURUSERNAME/M-C-C.github.io.git`
+2. Fork this [repository](https://github.com/north-script/glixer)
+3. Copy your fork url e.g. `git@github.com:YOURUSERNAME/glixer`
 4. On [c9.io](https://c9.io) create a new workspace
    * Template: Blank (Ubuntu Logo)
    * Clone from Git: use your fork url here
-5. See Linux Install Instructions
+5. When you get redirected to some sort of enviroment, look at the bottom, that's your command line. Click on it and enter the following command:
+`npm install`
+   
+#### Operation
 
-### Linux install instructions (For distributions with apt-get)
-1. Open a BASH terminal and navigate to the project folder.
-2. Enter the Following commands (1 command per line):
+To view the work:
+ 1. In the command line, run `gulp serve` - If it quits by itself then there is something wrong
+ 2. To view the result, click the `preview` button at the top and click `Preview Running Application`
+ 
+To publish your work to Github run these commands in the command line:
+ ```
+ gulp publish
+ git add .
+ git commit
+ git push origin master
+ ```
+
+### Local Machines
+
+#### System Dependencies
+
+##### Windows
+
+See WINDOWS.md for instructions on installing these dependencies. these links are download links for installers
+
+###### 64-bit
+
+ - [Git](https://www.git-scm.com/download/win)
+ - [Node.js](https://nodejs.org/dist/v7.7.3/node-v7.7.3-x64.msi)
+ - [Ruby](https://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.3.3-x64.exe)
+ - [Ruby Developer Kit](https://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe) - See WINDOWS.md for details on installing this.
+ 
+###### 32-bit
+
+ - [Git](https://www.git-scm.com/download/win)
+ - [Node.js](https://nodejs.org/dist/v7.7.3/node-v7.7.3-x86.msi)
+ - [Ruby](https://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.3.3.exe)
+ - [Ruby Developer Kit](https://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe) - See WINDOWS.md for details on installing this.
+
+##### Mac OSX
+ - [Node.js](https://nodejs.org/dist/v7.7.3/node-v7.7.3.pkg)
+ - [xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12)
+
+
+##### Linux
+ - [Node.js](https://nodejs.org/en/download/package-manager)
+ - `ruby`
+ - `ruby-dev`
+ - `zlib1g-dev`
+ - `build-essential`
+ - `git`
+ 
+#### Cloning and setup
+Open a Command Prompt or Terminal window and type these commands in:
 ```
-make
-gulp serve
-```
-### Windows
-See Windows-Install.md
-
-### Mac OSX
-#### Prerequisites
-1. Node.js
-2. XCode
-
-#### Install/building instructions
-1. open up a new terminal
-2. Enter the following commands: 
-```
-git clone https://github.com/north-script/north-script.github.io
-cd north-script.github.io
-make #ignore the errors
-sudo apt-get install zlib1g-dev ruby ruby-dev build-essential
-npm install #you'll get a big thumbs up if its all good
+git clone https://github.com/north-script/glixer
+cd glixer
+npm install
 ```
 
-## Operation (On local machines)
-1. Navigate to the project folder using the Terminal, Command Prompt or, PowerShell and run `gulp serve`. It may seem that the program is hanging but it's not, it's running a web server right on the window! (That means that there's something wrong if it quits by itself)
-2. [Click Me!](http://localhost:8080)
-3. Modify files in the [_src](_src) folder and see that your browser reloads automatically!
-4. When you are finished editing and admiring your work, you can terminate the web server by pressing `Ctrl-C` in the command window
+### Github Pages Setup (For organization/users)
+1. Create a new repository in your user/organization
+  - Make sure that initialize this repository with a README is unchecked
+  - If you are making this for a user profile, name your repository: yourusername.github.io
+  - If you are making this for a organization, make sure that the repository is created and owned by the organization and name it: yourorganization.github.io
+2. clone this repository: `git clone https://github.com/north-script/glixer`
+3. `cd glixer`
+4. Remove .git directory (Windows: `rmdir /S .git` Mac/Linux: `rm -r -f .git`) 
+5. `git init`
+6. `git remote add origin https://github.com/user-or-organization-name/user-or-organization-name.github.io`
+7. `git add .`
+8. `git commit -m "Initial commit"`
+9. `git push origin master`
+10. Optional: `npm install`
 
-## Operation (On C9.io)
+### Github Pages Setup (For projects/repositories)
 
-1. In your terminal run `gulp serve`
-2. Click the "Preview" link on the top.
-
-## Project Structure
- - [_src](_src): Where all your magic is
-     - [_app](_src/_app): Fonts, JS, SCSS, etc.
-          - [fonts](_src/_app/fonts): Where you want to store your fonts that you made/downloaded
-          - [js](_src/_app/js): JavaScript Files, [Vendor](_site/_app/js/vendor) is for your JavaScript libraries such as Jquery, Bootstrap, Angular, React, etc.
-          - [scss](_src/_app/scss): Folder where all of the styling happens, You can divide the files up however you would like.
-     - [_includes](_src/_includes): html snippets for the navbar, footer, etc.
-     - [_layouts](_src/_layouts): html site layouts, see [front.html](_site/_layouts/front.html) for an example
-     - [_posts](_src/_posts): Blog posts, used for blogs.
- - [.site](.site): Automatically generated output, not recommended to modify anything here as it will get deleted/overwritten.
- - [_config.yml](_config.yml): Jekyll Build Configuration, Don't change this unless you are feeling adventurous or know what you are doing
- - [css](css), [fonts](fonts), [js](js): Used for Jekyll build. Not recommended to change anything in these folders unless you know what you are doing
+1. Clone your repository
+2. `cd` into your repository
+3. clone this repository `git clone https://github.com/north-script/glixer`
+4. rename the glixer folder to docs.
+5. remove the .git (hidden) folder in your `docs` folder
+6. stage your changes and commit them.
+7. push your changes to your repository.
+8. Go to your repository settings and enable github pages from your `docs` folder
 
 ## Built by
 [Mike Boardley](https://www.linkedin.com/in/boardley/)
@@ -97,7 +135,12 @@ Please email me your comments & feedback.
 - mail <a href="mailto:boardley@gmail.com">boardley[at]gmail.com</a>
 - via <a href="https://www.linkedin.com/in/boardley/">LinkedIn</a>
 
-=========
 
-## Maintainers
 [Samuel Brekke](https://www.linkedin.com/in/sjbrekke/)
+
+Please contact me for any questions, comments, concerns and, feedback
+
+ - by mail: [brekmister@gmail.com](mailto:brekmister@gmail.com)
+ - Github: [brekmister](https://github.com/users/brekmister)
+ 
+---
