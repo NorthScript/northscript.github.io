@@ -1,0 +1,62 @@
+#main-slider {
+
+  img {
+    width: 100%
+  }
+
+  .carousel-caption {
+    background: none repeat scroll 0 0 $zero;
+    bottom: 14%;
+    color: $basic;
+    float: left;
+    left: 0;
+    opacity: 0.8;
+    padding:rem(10) rem(60) rem(35);
+    right: inherit;
+    text-transform: uppercase;
+    text-align: left;
+    
+    a {
+      color: $car-link;
+      font-size: rem(22);
+
+      &:hover {
+        color: $car-link2;
+      }
+
+      i {
+        margin-left: rem(15);
+        transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+
+        a:hover & {
+           margin-left: rem(35);
+        }
+      }
+    } 
+
+    h2 {  
+      font-size: rem(38);
+    }
+
+    h4 {
+      font-size: rem(24);
+    }
+  }
+
+  .carousel-indicators {
+    
+    li {
+      background-color: $primary;
+      border: rem(1) solid  $primary;
+
+      &.active {
+        background-color:$basic;
+        border:rem( 1) solid $basic;
+      }
+    }
+  }
+}

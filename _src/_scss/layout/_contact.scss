@@ -1,0 +1,81 @@
+/*************************
+******Contact CSS****
+**************************/
+
+.contact-section {
+  background-color: #f7ab24;
+  background-image: url("img/contact-bg.jpg");
+  background-position:60% 0;
+  background-size:contain;
+  background-repeat:no-repeat;  
+  position: relative;
+
+  h3 {  
+    margin-bottom: rem(25)
+  }
+  
+  .form-control {
+    border-color: #ae750d;
+    border-radius: 0;
+    box-shadow:none;
+    color: #797979;
+    font-size: rem(18);
+    outline: 0 none;
+
+    &:focus {
+      border-color: #ae750d;
+    }
+  }
+
+  input {  
+    height: rem(44);
+  }
+
+  textarea {
+    height: rem(90);
+    resize:none;
+  }
+
+  .btn-primary {
+    background-color: $dk-gray;
+    color: #f7ab24;
+    border: none;
+    font-size: rem(24);
+    padding:rem( 6) rem(42);
+    margin-bottom: rem(110);
+    margin-top: rem(10);
+
+    &:hover {
+      background-color: #212020;
+      color: $basic;
+    }
+  }
+}
+
+.ear-piece {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#contact {
+  
+  h3 {
+    text-transform:inherit;
+    color: $dk-gray; 
+  }
+
+  .container {
+    padding-top:rem(47);
+  }
+}
+
+#contact address {
+  font-size: rem(18);  
+  color: $dk-gray; 
+}
+
+.contact-text {
+  margin-bottom: rem(35);
+  display: block;
+}

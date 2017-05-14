@@ -49,17 +49,18 @@ gulp.task('build:copy', function() {
 	gulp.src([
 		'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js', 
 		'node_modules/jquery/dist/jquery.js',
-		'/node_modules/leaflet/src/Leaflet.js'])
+		'/node_modules/leaflet/src/Leaflet.js'
+		])
 		.pipe(gulp.dest(appDir + '/_js/vendor'));
 
 })
 
-gulp.task('build:images', function(cb) {
+gulp.task('build:images', function() {
     gulp.src([appDir+'/**/*.png',
               appDir+'/**/*.jpg',
               appDir+'/**/*.gif'])
-         .pipe(gulp.dest(''))
-         .pipe(gulp.dest(siteDir)).on('end', cb).on('error', cb);
+         .pipe(gulp.dest(siteDir))
+         .pipe(gulp.dest(lib));
 });
 
 // Runs Jekyll build
@@ -92,8 +93,16 @@ gulp.task('build:scripts', function() {
     		[
 	    		appDir + '/_js/vendor/jquery.js',
 	    		appDir + '/_js/vendor/bootstrap.js',
-	    		appDir + '/_js/**/*.js',
-	    		appDir + '/_js/*.js'
+					appDir + '/_js/vendor/gmaps-sensor.js',
+					appDir + '/_js/vendor/gmaps.js',
+					appDir + '/_js/vendor/smoothscroll.js',
+					appDir + '/_js/vendor/jquery.parallax.js',
+					appDir + '/_js/vendor/coundown-timer.js',
+					appDir + '/_js/vendor/jquery.scrollTo.js',
+					appDir + '/_js/vendor/jquery.nav.js',
+					appDir + '/_js/main.js',
+	    		//appDir + '/_js/**/*.js',
+	    		//appDir + '/_js/*.js'
     		]
     	)
     )

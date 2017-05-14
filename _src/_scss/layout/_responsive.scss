@@ -1,0 +1,451 @@
+/* lg */ 
+@media (min-width: rem(1200)) {
+  
+}
+
+/* md */
+@media (min-width: rem(992)) and (max-width: 1rem(199)) {
+
+  .navbar-right {
+    padding: 0 rem(30) 0 0;
+  }
+
+  .navbar-right li a {
+    padding: rem(35) rem(15);
+  }
+
+  .fixed-menu .container {
+    width: 100%;
+  }
+
+  .fixed-menu .navbar-right {
+    padding-right: rem(30);
+  }
+
+  .fixed-menu .navbar-right li a {
+    padding: rem(20);
+  }
+
+  
+  #countdown li {
+    margin-right: rem(30);
+  }
+
+  .guitar {
+    right:0;
+  }
+
+  .guitar2 {
+    height: 100%
+  }
+
+    .guitar2 img {
+      padding-top: 20%;
+    }
+
+  .ear-piece {
+    left: -15%;
+  }
+
+  #event .col-md-9 {
+    z-index: 10;
+  }
+
+
+}
+
+/* sm */
+@media (min-width: rem(768)) and (max-width: rem(991)) {
+
+  .navbar-brand {
+    width: rem(215);
+    height: rem(60);
+  }
+
+  .navbar-right {
+    padding: 0;
+  }
+
+  .navbar-right li a {
+    padding: rem(20) rem(11);
+    font-size: rem(17);
+  }
+
+  .fixed-menu .container {
+    width: 100%;
+  }
+
+  .fixed-menu .navbar-right {
+    padding-right: rem(30);
+  }
+
+  .fixed-menu .navbar-right li a {
+    padding: rem(20) rem(15);
+    font-size: rem(17);
+  }
+ 
+ #countdown li {
+  margin-right: rem(15);
+ }
+
+  .sponsor-control-left {
+    right:8%;
+  }
+
+  .sponsor-control-right {
+    right: 5%;
+  }
+
+  .guitar, .ear-piece, .light {
+    display: none;
+  }
+
+  .watch {
+    left: -8%
+  }
+
+  .guitar2 {
+    height: 100%;
+  }
+
+  .guitar2 img {
+    padding-top:38%;
+  }
+
+  .twit {
+    left: -5%;
+  }
+
+
+}
+
+/* xs */
+@media (max-width: rem(767)) {
+
+  .main-nav .container {
+    display: none;
+  }
+  
+  .fixed-menu .container {
+    display: block;
+  }
+
+   .fixed-menu .container {
+    width: 100%;
+  }
+
+  .navbar-brand {
+    width: inherit;
+  }
+
+  .fixed-menu .navbar-right li a {
+    padding: rem(7) rem(25);
+  }
+
+  #home {
+    margin-top: 10%;
+  }
+
+  #main-slider .carousel-caption {
+    bottom: 17%;
+    padding: rem(10);
+    line-height: 0;
+  }
+
+  #main-slider .carousel-caption h2 {
+    font-size: rem(20);
+    margin-top: rem(3);
+  }
+
+  #main-slider .carousel-caption h4 {
+    font-size: rem(16);
+  }
+
+  #main-slider .carousel-caption a {
+    font-size: rem(14);
+    color: #2da1c5;
+  }
+
+  #explore {
+    background-size:cover;
+  }
+
+  #explore h2 {
+    float: inherit;
+    font-size: rem(30);
+    margin-bottom: rem(30);
+  }  
+
+  #countdown li {
+    font-size: rem(14);
+    margin-right: rem(35);
+    width:inherit;
+  }
+
+  #countdown li span {
+    font-size: rem(24);
+    height: rem(60);
+    line-height: rem(60);
+    width: rem(60);
+  }
+
+  #countdown li:before, 
+  #countdown li:after {
+    top: rem(25);
+  }
+
+  .cart a {
+    font-size: rem(18);
+  }
+
+  .cart a i {
+    font-size: rem(20);
+    padding: rem(15);
+  }
+
+   /*event */
+  .single-event {
+    margin-bottom: rem(40);
+  }
+
+
+  #event h2, 
+  #about h2, 
+  #sponsor h2 {
+    font-size: rem(30);
+  }
+
+  .twitter-control-left, 
+  .twitter-control-right {
+    top: inherit;
+    bottom: -rem(40);
+  }
+
+  .twitter-control-left {
+    left: 46%;
+  }
+
+  .twitter-control-right {
+    right: 46%;
+  }
+
+  #sponsor {
+    background-position: right 0 bottom 0;
+  }
+
+  .sponsor-control-left, 
+  .sponsor-control-right {
+    top:0;
+  }
+
+  .sponsor-control-left {
+    right: 10%;
+  }
+
+  .sponsor-control-right {
+    right: 5%;
+  }
+
+  #sponsor .item ul li {
+    width: 30%;
+    margin-right:3%
+  }
+
+  #sponsor .item ul li:last-child {
+    margin-right: 0;
+   }
+
+
+  #footer {
+    font-size: rem(16);
+  }
+
+  .watch, .guitar, .guitar2, .twit, .light, .ear-piece {
+    display: none;
+  }
+
+  .contact-section {
+    background-position: left 0 bottom 0;
+    background-size: cover;
+  }
+
+  .about-content {
+    width: 100%;    
+    padding: rem(70) rem(25) rem(110);
+  }
+
+}
+
+/* XS Portrait */
+@media (max-width: rem(479)) {
+
+  .main-nav .container {
+    display: none;
+  }
+
+  .fixed-menu .container {
+    display: block;
+  }
+
+  .fixed-menu .navbar-right li a {
+    padding: rem(10) rem(25);
+  }
+
+  /* Home */
+
+  #home {
+    margin-top: 18%;
+  }
+
+  .fixed-menu .container {
+    width: 100%;
+  }
+
+  .navbar-brand {
+    width: inherit;
+  }
+
+
+  #main-slider .carousel-caption {
+    bottom: 17%;
+    padding: rem(10);
+    line-height: 0;
+  }
+
+  #main-slider .carousel-caption h2 {
+    font-size: rem(18);
+    margin-top: rem(3);
+  }
+
+  #main-slider .carousel-caption h4 {
+    font-size: rem(14);
+  }
+
+  #main-slider .carousel-caption a {
+    font-size: rem(12);
+    color: #2da1c5;
+  }
+
+  .carousel-indicators {
+    bottom: 0;
+  }
+
+  /* Explore */
+  #explore {
+    background-size:cover;
+  }
+
+  #explore h2 {
+    float: inherit;
+    font-size: rem(30);
+    margin-bottom: rem(30);
+  }  
+
+  #countdown li {
+    font-size: rem(14);
+    margin-right: rem(15);
+    width: rem(45);
+  }
+
+  #countdown li span {
+    font-size: rem(20);
+    height: rem(45);
+    line-height: rem(45);
+    width: rem(45);
+  }
+
+  #countdown li:before, 
+  #countdown li:after {
+    top: rem(18)
+  }
+
+  .cart {
+    right:-rem(209);
+  }
+
+  .cart a {
+    font-size: rem(18);
+  }
+
+  .cart a i {
+    font-size: rem(20);
+    padding: rem(12);
+  }
+
+    /*event */
+  .single-event {
+    margin-bottom: rem(40);
+  }
+
+  .about-content {
+    width: 100%;    
+    padding: rem(70) rem(30) rem(110);
+  }
+
+  #event h2, 
+  #about h2, 
+  #sponsor h2 {
+    font-size: rem(30);
+  }
+
+  .about-content p, 
+  #twitter-feed .item a, 
+  #twitter-feed .item p {
+    font-size: rem(15);
+  }
+
+  .twitter-control-left, 
+  .twitter-control-right {
+    top: inherit;
+    bottom: rem(-40);
+  }
+
+  .twitter-control-left {
+    left: 46%;
+  }
+
+  .twitter-control-right {
+    right: 46%;
+  }
+
+  #sponsor {
+    background-position: right 0 bottom;
+  }
+
+  .sponsor-control-left, 
+  .sponsor-control-right {
+    top: 0;
+  }
+
+  .sponsor-control-left {
+    right: 10%;
+  }
+
+  .sponsor-control-right {
+    right: 5%;
+  }
+
+  #sponsor .item ul li {
+    width: 45%;
+    margin-right: 5%
+  }
+
+  #sponsor .item ul li:last-child {
+    margin-right: 0;
+   }
+ 
+  #footer {
+    font-size: rem(14);
+  }
+
+  .watch, .guitar, .guitar2, .twit, .light, .ear-piece {
+    display: none;
+  }
+
+  .contact-section {
+    background-position: left 0 bottom 0;
+    background-size: cover;
+  }
+
+}
+

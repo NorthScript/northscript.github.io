@@ -1,0 +1,65 @@
+ /*************************
+*******Event CSS******
+**************************/
+#event {
+  background-color: #33888F;
+  background-image: url("img/performar-bg.jpg");
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  
+  h2 {
+    color: $basic;
+    font-size: rem(36);
+    font-weight: 300;
+    margin-bottom: rem(40);
+    margin-top: rem(70);
+    text-transform: uppercase;
+  }
+}
+
+.guitar {
+  position: absolute;
+  right:0;
+  top: 0
+}
+
+.single-event {
+  margin-bottom: rem(70);
+  
+  h4 {
+    color: $basic;
+    font-size: rem(24);
+    font-weight: 300;
+    line-height: rem(26);
+    margin-top: rem(25);
+    text-transform: uppercase;
+  }
+  
+  h5 {
+    display: block;
+    font-size: rem(18);
+    font-weight: 100;
+  }
+}
+
+#event-carousel {
+  position: relative;
+}
+
+.even-control-left, 
+.even-control-right {
+  color: $basic;
+  font-size: rem(24);
+  position: absolute;
+  top: 0;
+}
+
+.even-control-left {
+  right: 3%
+} 
+
+.even-control-right {
+  right: 0;
+}

@@ -1,0 +1,49 @@
+/*************************
+*******About CSS**********
+**************************/
+
+#about {
+  background-color: #75B46E;  
+  position: relative;  
+  width: 100%;
+  display: flex;
+
+  h2 {
+    margin-bottom: rem(23);
+  }
+
+  .btn-primary {
+    background-color: #137c61;
+    border: none;
+    color: $basic;;
+    margin-top: rem( 28);
+    text-transform: capitalize;
+
+    &:hover {
+      background-color: #126d55
+    }
+  }
+}
+
+.guitar2 {
+  top: 0;
+  width: 50%;
+
+  img {
+    padding-top: 3%;
+  }
+}
+
+.about-content {
+  width: 50%;
+   background-image: url("img/about-bg.jpg");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: rem(70) rem(70)  rem(110);
+
+  p {
+    font-size: rem(17);
+    font-family: 'Dosis',sans-serif;
+  }
+}

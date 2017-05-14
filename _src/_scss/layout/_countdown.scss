@@ -1,0 +1,75 @@
+#countdown {
+  display: block;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+
+    li {
+    display:inline-block;
+    font-size: rem(18);
+    list-style: none;
+    margin-right: rem(40);
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:after,
+    &:before {
+      background-color: $basic;
+      content: "";
+      height: rem(11);
+      position: absolute;
+      top: rem(36);
+      width: rem(1);
+    }
+
+    &:after {
+      right:0;
+    }
+
+    &:before {
+      left:0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    span {
+      border-radius: rem(10);
+      border-right: rem(1) solid $red2;
+      border-bottom: rem(1) solid $red2;
+      display: block;
+      font-size: rem(40);
+      font-weight: 700;
+      height: rem(82);
+      line-height: rem(79);
+      width: rem(75);
+
+    }
+    $count-border: rem(1);
+    .days {
+      background-color:$color-secondary-2-4;
+      border-left: $count-border solid $count-primary;
+      border-top: $count-border solid $count-primary;
+    }
+
+    .hours {
+      background-color: $color-secondary-2-3; 
+      border-top: $count-border solid #f2d470;
+      border-left: $count-border solid #f2d470;
+    }
+
+    .minutes {
+      background-color: $color-secondary-2-2;
+      border-top: $count-border solid #e89565;
+      border-left: $count-border solid #e89565;
+    }
+
+    .seconds {
+      background-color: $color-secondary-2-1;
+      border-top: $count-border solid #e57b6d;
+      border-left: $count-border solid #e57b6d;
+    }
+  }
+}

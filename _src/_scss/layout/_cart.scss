@@ -1,0 +1,30 @@
+.cart {
+  background-color: #b34534;  
+  position: absolute;
+  right:- rem(200);
+  top: 37%;
+  width: rem(252);
+   -webkit-transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  -ms-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+
+  &:hover {
+    right: 0;
+  }
+
+  a {
+    color: $basic;
+    display: block;
+    font-size: rem(24);
+    text-transform: uppercase;
+    
+    i {
+      font-size: rem(30);  
+      padding: rem(20) rem(12);
+      background-color: #A64030; 
+      margin-right:rem(3);
+    }
+  }
+}

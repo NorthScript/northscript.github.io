@@ -1,0 +1,62 @@
+/*************************
+******Sponsor CSS****
+**************************/
+
+#sponsor {
+  background-color: #1881a2;
+  background-image: url("img/sponsor-bg.jpg");
+  background-position:50% 0;
+  background-size: cover;
+  background-repeat:no-repeat;
+  position: relative;
+
+  h2 {
+    margin-top: rem(90);
+    margin-bottom: rem(40);
+  }
+
+  .item {
+
+    ul {
+      font-size: 0;
+      padding: 0;
+      
+      li {
+        display: inline-block;
+        list-style: none;
+        width: 33.33%;
+        margin-bottom: rem(75);
+        
+        &:last-child {
+          margin-right: 0
+        }
+      }
+    }
+  }
+
+  .col-sm-10 {
+    z-index: 10;
+  }
+}
+
+.light {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.sponsor-control-left, 
+.sponsor-control-right {
+  color: $basic;
+  font-size: rem(24);
+  position: absolute;
+  top: 20%;
+}
+
+.sponsor-control-left {
+  right: 12%
+}
+
+.sponsor-control-right {
+  right: 10%
+}

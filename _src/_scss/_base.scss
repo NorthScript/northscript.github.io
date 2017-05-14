@@ -1,24 +1,91 @@
 /* ===========================
    Base
    =========================== */
+html, body {
+    font-size: 100%;
+}
+
+/*************************
+*******Typography******
+**************************/
 
 body {
-    background: $blue;
-    color: white;
+  font-family: 'Dosis', sans-serif;
+  color: $basic;
 }
 
-a {}
-
-
-#map { 
-    height: 360px; 
-    /*width: 50%;*/
+.btn {
+  border-radius: 0;
+  font-family: 'Yanone Kaffeesatz','sans-serif';
+  font-size: rem(20);
+  padding: rem(9) rem(23);
 }
 
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    background-color: #f5f5f5;
+a {
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+}
+
+a:focus, 
+a:hover {
+  text-decoration: none;
+  outline: none
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Yanone Kaffeesatz', 'sans-serif';
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: rem(36)
+}
+
+/*************************
+*******Home CSS******
+**************************/
+
+#home {
+  position: relative;
+  overflow: hidden;
+}
+
+/*************************
+*******Explore CSS******
+**************************/
+
+#explore {
+  background-color: $color-primary-0;
+  background-position: center bottom;
+  background-size: contain;
+  background-repeat:no-repeat;
+  overflow: hidden;
+  padding: rem(130) 0 rem(100);
+  position: relative;
+}
+
+.watch {
+  position: absolute;
+  left: 0;
+  top: 7%;
+}
+
+#explore h2 {
+  font-size: rem(42);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/*************************
+******Map CSS****
+**************************/
+#map {
+  position: relative;
+}
+
+#gmap {
+  height: 450px;  
 }

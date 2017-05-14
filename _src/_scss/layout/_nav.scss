@@ -1,0 +1,51 @@
+/*************************
+*******Nav CSS******
+**************************/
+
+.navbar-toggle {
+  margin-top: rem(12);
+
+  &, &:focus {
+    border:1px solid $basic;
+    outline: none;
+  }
+
+  .icon-bar {
+    background-color: $basic;
+  }
+}
+
+
+.navbar-brand {
+  background: rgba(#1b7b98, .85);
+  align-content: center;
+  display: flex;
+  //animation: colorchange 50s; /* animation-name followed by duration in seconds*/
+  /* you could also use milliseconds (ms) or something like 2.5s */
+ // -webkit-animation: colorchange 50s; /* Chrome and Safari */
+  
+  svg {
+    width: 100%;
+  }
+}
+
+$color-1: rgba($color-primary-0, .85);
+$color-2: rgba($color-secondary-1-0, .85);
+$color-3: rgba($color-secondary-2-0, .85);
+$color-4: rgba($color-complement-0, .85);
+
+@keyframes colorchange {
+  0%   {background: $color-1;}
+  25%  {background: $color-2;}
+  50%  {background: $color-3;}
+  75%  {background: $color-4;}
+  100% {background: $color-1;}
+}
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */ {
+  0%   {background: $color-1;}
+  25%  {background: $color-2;}
+  50%  {background: $color-3;}
+  75%  {background: $color-4;}
+  100% {background: $color-1;}
+}

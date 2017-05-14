@@ -1,5 +1,112 @@
-/* ==|====================
-   Layout/Header
-   ======================= */
+/*************************
+*******Header CSS******
+**************************/
 
-.l-header {}
+.header-top {
+  display: block;
+  overflow: hidden;
+  padding: rem(25);
+}
+
+.main-nav {
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+}
+
+.main-nav 
+.container {
+  width: 100%
+}
+
+.social-icons a {
+  font-size: rem(18);
+  color: $basic;
+  padding-left:rem(20);  
+}
+
+.social-icons .fa-facebook:hover {
+  color: $facebook;
+}
+
+.social-icons .fa-twitter:hover {
+  color: $twitter;
+}
+
+.social-icons .fa-google-plus:hover {
+  color: $googlep;
+}
+
+.social-icons .fa-youtube:hover{
+  color: $youtube;
+}
+
+.navbar-brand {
+  background-color: $primary;
+  height: rem(90);
+  margin-bottom: rem(20);
+  position: relative;
+  width: rem(297);
+}
+
+.navbar-brand img {
+  position: absolute;
+  top: -rem(35);
+}
+
+.navbar-right {
+  background-color: $primary;
+  padding:0 rem(95) 0 0;
+  opacity: .9
+}
+
+.navbar-right li a {
+  padding: rem(35) rem(21);
+  font-size: rem(22);
+  color: $basic;
+  text-transform: uppercase;
+  font-family: 'Yanone Kaffeesatz', 'sans-serif';
+  font-weight: 300;
+}
+
+.navbar-right li a:hover, 
+.navbar-right li a:focus,  
+.navbar-right .active a {
+  background-color: $basic;
+  color: #16728f
+}
+
+
+.fixed-menu {
+  background-color: $color2;
+  position: fixed;
+  top: 0;
+}
+
+.fixed-menu .navbar-right {
+  padding: 0;
+}
+
+
+.fixed-menu .navbar-right li a {
+  font-size: rem(18);
+  padding: rem(20) rem(25);
+  text-shadow:inherit;
+}
+
+.fixed-menu .navbar-brand {
+  height: rem(60);
+  margin-top: 0;
+  padding: 0;
+  margin-bottom: 0;
+  width: 1rem(25);
+}
+
+.fixed-menu .navbar-brand img {
+  height:rem(60);
+  top: 0;
+}
+
+.fixed-menu .header-top {
+  display: none;
+}

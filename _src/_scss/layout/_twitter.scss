@@ -1,0 +1,68 @@
+/*************************
+******Twitter CSS****
+**************************/
+
+#twitter {
+  background-color: #ecedef;
+  background-image: url("img/twitter-bg.jpg");
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat:no-repeat;
+  position: relative;
+  padding: rem(95) 0 rem(90);
+  overflow: hidden;
+}
+
+.twit {
+  position: absolute;
+  left: 0;
+  top:-42%;
+}
+
+#twitter-feed  {
+  
+  .item {
+    text-align: center;
+    
+    a {
+      color:#00c3ff;
+    }
+
+    a, 
+    p { 
+      font-size: rem(24);
+      font-weight: 300;
+      font-family: 'Yanone Kaffeesatz','sans-serif';
+    }
+
+    p {
+      color: #3D3D3D;
+    }
+    img {
+      display: inline-block;
+      width: rem(78);
+      height: rem(78);
+      border-radius: 50%;
+      background-color: #c5c8ce;
+      padding: rem(5);
+      margin-bottom: rem(30);
+    }
+
+  }
+}
+
+.twitter-control-left, 
+.twitter-control-right {
+  position: absolute;
+  color: #00c3ff;
+  top: 59%;
+  font-size: rem(24)
+}
+
+.twitter-control-left {
+  left: 0;
+}
+
+.twitter-control-right {
+  right:0;
+} 

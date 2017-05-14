@@ -1,5 +1,22 @@
-/* ==|====================
-   Layout/Footer
-   ======================= */
+/*************************
+******Footer CSS****
+**************************/
 
-.l-footer {}
+#footer {
+  background-color: #212121;
+  background-image: url("img/footer-bg.jpg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #basic;
+  font-size: rem(20);
+  padding: rem(35) 0;
+
+  a {
+    color:#f7ab24;
+
+    &:hover {
+      color:#1B7B98
+    }
+  }
+}
